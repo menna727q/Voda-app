@@ -1,0 +1,36 @@
+.footer{
+    background-color: #323544;
+    
+   
+}
+.email input{
+    background-color: var(--back_nav);
+    border: 1px solid var(--back_nav);
+    outline: none;
+}
+
+.email button{
+    top: 5px;
+    right: 10px;
+    background-color: #009ad8;
+    color: white;
+    outline: none;
+    padding: 10px 20px 10px 20px;
+    border: 1px solid #009ad8;
+}
+.content p{
+    color: white;
+}
+.content2 span{
+  background-color: var(--back_nav);
+  color: #009ad8;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  margin-left: 6px;
+  cursor: pointer;
+}
+.content2 span:hover{
+    background-color: #009ad8;
+    color: white;
+}

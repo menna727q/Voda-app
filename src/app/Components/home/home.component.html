@@ -1,0 +1,77 @@
+<div class="container"> 
+    <div class="search-iconn">
+      <div class="container">
+        <form class="search p-5 position-relative">
+          <input class="w-100 rounded-5 p-3" type="text" [(ngModel)]="searchCityName" placeholder="Enter city name..." id="search" name="search">
+          <button class="rounded-5 position-absolute ms-auto " (click)="searchCity(searchCityName)">Find</button>
+        </form>
+      </div>
+    <div class="toggle d-flex justify-content-between">
+          <div class="dropdown" >
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Choose Date
+            </button>
+            <ul class="dropdown-menu" >
+              <li *ngFor="let date of ['2023-11-27', '2023-11-26', '2023-11-25', '2023-11-24', '2023-11-23']">
+                <a class="dropdown-item" href="#" (click)="onDateChange(date)">{{ date }}</a>
+              </li>
+            </ul>
+          </div>
+         <div class="container" *ngIf="selectedDate &&!searching " [ngClass]="{'d-none':!selectedDate,'d-block':selectedDate}">
+          <div class="row"  >
+            <div class="col-lg-4 citie"  *ngFor="let city of cities">
+              <h5>{{ city.city }}</h5>
+              <div class="degree p-3 d-flex justify-content-between">
+                <p>
+                  {{ getWeatherForDate(city)?.[this.isCelsius ? 'temperatureCelsius' : 'temperatureFahrenheit'] }}
+                  {{ this.isCelsius ? '°C' : '°F' }}
+                </p>
+                <p>{{ getWeatherForDate(city)?.humidity }}%</p>
+              </div>
+             
+            </div>
+           </div>
+         </div>
+        
+            
+        
+
+
+
+<div *ngIf="!searching &&searchedCities.length == 0">
+  <button (click)="toggleUnit()">Toggle Unit</button>
+
+</div>
+
+     </div>
+    </div>
+
+    <div class="row container m-auto forest" *ngIf="!searching && searchedCities.length == 0  "[ngClass]="{'d-none':selectedDate,'d-flex':!selectedDate}">
+      <div class="col-lg-4 citie" *ngFor="let city of cities">
+        <div class="cityday d-flex justify-content-between p-4 py-2 w-100">
+          <h2>{{ city.city }}</h2>
+          <p>{{ city.lastdate?.date }}</p>
+        </div>
+       <div class="degree p-3 d-flex justify-content-between">
+        <p>{{ getTemperature(city) }}°{{ isCelsius ? 'C' : 'F' }}</p> 
+        <p class="text-center">{{city.lastdate?.humidity}}</p>  
+       </div>      
+      </div>
+    </div>
+    <div class="row" *ngIf="searching">
+      <h2>{{ searchedCity?.city }}</h2>
+        
+          <div  class="col-lg-4 citie"  *ngFor="let forecast of searchedCity?.forecast"> 
+            <div *ngIf="searchedCity">
+               <h6>Date: {{ forecast.date }}</h6>
+               <h6>Temperature by Celsius: {{forecast.temperatureCelsius}}&deg;C</h6>
+               <h6>Temperature by Fahrenheit:{{forecast.temperatureFahrenheit}}&deg;f</h6>
+              </div>
+          </div>
+          </div>
+        <div class="col-4 citie" *ngIf="!searchedCity && searching">
+          <p style="color: white;">{{ cityNotFoundMessage }}</p>
+        </div>
+      </div>
+    
+  

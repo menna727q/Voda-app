@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --back_nav:#1e202b;
+}
+
+body{
+    margin: 0;
+    top: 0;
+    background-color: var(--back_nav)!important;
+    color: white;
+}

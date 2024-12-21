@@ -1,0 +1,77 @@
+.search-iconn{
+    background-image: url(../../assets/images/banner.png);
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    height: 50vh;
+}
+.search input{
+    background-color: var(--back_nav);
+    border: 1px solid var(--back_nav);
+    outline: none;
+}
+.search button{
+    top: 54px;
+    right: 54px;
+    background-color: #009ad8;
+    color: white;
+    outline: none;
+    padding: 10px 20px 10px 20px;
+    border: 1px solid #009ad8;
+}
+.box-container{
+    background: #323544;
+   
+}
+.forest{
+position: relative;
+left: 50%;
+transform: translate(-50%,-2%);
+z-index: 99;
+}
+
+.citie{
+background-color: var(--back_nav);
+border-radius: 5px 5px 5px 5px ;
+border: solid #323544 1px;
+color: rgba(255, 255, 255, 0.75);
+}
+input{
+    color: white;
+}
+.toggle{
+    margin-top: 70px;
+}
+input[type='date']{
+    color: black;
+}
+.cityday{
+    background: rgba(0, 0, 0, 0.1);
+    color: #bfc1c8;
+    border-radius: 10px 0px 0px 0px ;
+    width: 100%;
+    overflow: hidden;
+}
+.Degreetommmin{
+    color: #bfc1c8;
+}
+.degreeDes{
+    color: rgb(54, 54, 255);
+}
+.dayafter{
+    background-color: var(--back_nav);
+    border-radius: 0px 10px 10px 0px ;
+    color: rgba(255, 255, 255, 0.75);
+}
+.degree h3{
+    color: white;
+}
+button{
+    background-color: #009ad8;
+    color: white;
+    outline: none;
+    padding: 3px 5px 3px 5px;
+    border: 5px solid #009ad8;
+    border-radius: 50px;
+
+}
