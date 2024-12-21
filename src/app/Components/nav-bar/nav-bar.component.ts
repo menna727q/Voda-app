@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import '@fortawesome/angular-fontawesome'; // Import the specific icon you need
 
 @Component({
   selector: 'app-nav-bar',
