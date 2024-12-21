@@ -1,6 +1,6 @@
 
 .search-iconn{
-    background-image: url(../../assets/images/banner.png);
+    background-image: url(../../../assets/banner.png);
     background-position: center;
     background-repeat: none;
     background-size: cover;
@@ -64,6 +64,12 @@ input[type='date']{
     border-radius: 0px 10px 10px 0px ;
     color: rgba(255, 255, 255, 0.75);
 }
+/* .degree{
+    background-image: url(../../../assets/humidity.jpg);
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+} */
 .degree h3{
     color: white;
 }
@@ -75,4 +81,8 @@ button{
     border: 5px solid #009ad8;
     border-radius: 50px;
 
+}
+.image1{
+    width: 20px;
+    height: 20px;
 }

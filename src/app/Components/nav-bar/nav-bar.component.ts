@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
   standalone: false,
   
   templateUrl: './nav-bar.component.html',
-  styleUrl: './nav-bar.component.css'
+  styleUrls:['./nav-bar.component.css']
 })
 export class NavBarComponent {
-  imgSrc:string='../../assets/images/logo.png'
+  imgSrc: string = 'assets/clear.png';
 }

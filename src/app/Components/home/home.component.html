@@ -52,10 +52,15 @@
           <h2>{{ city.city }}</h2>
           <p>{{ city.lastdate?.date }}</p>
         </div>
+        
        <div class="degree p-3 d-flex justify-content-between">
         <p>{{ getTemperature(city) }}°{{ isCelsius ? 'C' : 'F' }}</p> 
+       <div class="d-flex justify-content-lg-evenly">
+        <img class=" image1" [src]="imgSrc" alt="">
         <p class="text-center">{{city.lastdate?.humidity}}</p>  
-       </div>      
+       </div>
+
+      </div>      
       </div>
     </div>
     <div class="row" *ngIf="searching">

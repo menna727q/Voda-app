@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   constructor (private weatherservice:WeatherService){
 
   }
-  img:string='../../assets/images/logo.png'
+  imgSrc:string="./assets/humidity.png"
   cities:any[] =[]
   isCelsius = true;
   searching: boolean = false;

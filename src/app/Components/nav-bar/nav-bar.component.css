@@ -44,5 +44,7 @@ nav .navbar-brand p{
     color: #365486; 
 }
 .image{
-    background-image: url(../../assets/images/banner.png) !important;
+    /* background-image: url(logo.png) !important; */
+  width: 50px;
+  height: 50px;
 }
